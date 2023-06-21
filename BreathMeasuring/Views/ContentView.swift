@@ -18,26 +18,35 @@ struct ContentView: View {
   
   @State var buttonTitle = "Start monitoring"
   
-  @State var isTrackingBreath = false
+  @State var isTrackingBreath = false {
+    didSet {
+      if isTrackingBreath {
+        buttonTitle = "Stop monitoring"
+        breathObserver.startTrackAudioSignal()
+      } else {
+        buttonTitle = "Start monitoring"
+        breathObserver.stopTrackAudioSignal()
+      }
+    }
+  }
   
   var body: some View {
     VStack {
+      // TODO: add the live graph based on the value from breath Observer
+      // https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts
       Button(buttonTitle) {
         isTrackingBreath.toggle()
-        if isTrackingBreath {
-          buttonTitle = "Stop monitoring"
-          breathObserver.stopTrackAudioSignal()
-        } else {
-          buttonTitle = "Start monitoring"
-          breathObserver.startTrackAudioSignal()
-        }
       }
       .onReceive(timer) { _ in
         guard isTrackingBreath else {
           return
         }
-        let value = breathObserver.trackAudioSignal()
-        print("🙆🏻🙆🏻🙆🏻 \(value)")
+        do {
+          let value = try breathObserver.trackAudioSignal()
+          print("🙆🏻🙆🏻🙆🏻 \(value)")
+        } catch {
+          print("error: \(error.localizedDescription)")
+        }
       }
     }
     .padding()
