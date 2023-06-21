@@ -12,6 +12,7 @@
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
 		4F2CEE6A2A428C7A00CC8614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE692A428C7A00CC8614 /* Preview Assets.xcassets */; };
 		4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2CEE712A428DAF00CC8614 /* BreathObsever */; };
+		4F2CEE782A4291D900CC8614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE772A4291D900CC8614 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4F2CEE672A428C7A00CC8614 /* BreathMeasuring.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BreathMeasuring.entitlements; sourceTree = "<group>"; };
 		4F2CEE692A428C7A00CC8614 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F2CEE732A428E0E00CC8614 /* BreathObsever */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BreathObsever; path = ../BreathObsever; sourceTree = "<group>"; };
+		4F2CEE772A4291D900CC8614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		4F2CEE602A428C7800CC8614 /* BreathMeasuring */ = {
 			isa = PBXGroup;
 			children = (
+				4F2CEE762A4291CB00CC8614 /* Essential */,
 				4F2CEE752A42901000CC8614 /* Views */,
 				4F2CEE682A428C7A00CC8614 /* Preview Content */,
 				4F2CEE742A428FF800CC8614 /* SupportingFiles */,
@@ -87,6 +90,14 @@
 				4F2CEE632A428C7800CC8614 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4F2CEE762A4291CB00CC8614 /* Essential */ = {
+			isa = PBXGroup;
+			children = (
+				4F2CEE772A4291D900CC8614 /* Extensions.swift */,
+			);
+			path = Essential;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */,
+				4F2CEE782A4291D900CC8614 /* Extensions.swift in Sources */,
 				4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
