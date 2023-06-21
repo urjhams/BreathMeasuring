@@ -28,9 +28,7 @@ struct ContentView: View {
   
   var body: some View {
     VStack {
-      // TODO: add the live graph based on the value from breath Observer
-      // TODO: find the threshold, frequency of breathing
-      // TODO: make the breath pattern measuring by getting peak
+      
       // https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts
       Button(isTrackingBreath ? "Stop monitoring" : "Start monitoring") {
         isTrackingBreath.toggle()
@@ -39,15 +37,21 @@ struct ContentView: View {
         guard isTrackingBreath else {
           return
         }
+        
         do {
           let value = try breathObserver.trackAudioSignal()
+          // TODO: add the live graph based on the value from breath Observer
+          // TODO: find the threshold, frequency of breathing
+          // TODO: make the breath pattern measuring by getting peak
           print("🙆🏻🙆🏻🙆🏻 \(value)")
         } catch {
           print("error: \(error.localizedDescription)")
         }
       }
+      
     }
     .padding()
+    
   }
 }
 
