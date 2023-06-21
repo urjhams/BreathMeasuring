@@ -56,11 +56,9 @@
 		4F2CEE602A428C7800CC8614 /* BreathMeasuring */ = {
 			isa = PBXGroup;
 			children = (
-				4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */,
-				4F2CEE632A428C7800CC8614 /* ContentView.swift */,
-				4F2CEE652A428C7A00CC8614 /* Assets.xcassets */,
-				4F2CEE672A428C7A00CC8614 /* BreathMeasuring.entitlements */,
+				4F2CEE752A42901000CC8614 /* Views */,
 				4F2CEE682A428C7A00CC8614 /* Preview Content */,
+				4F2CEE742A428FF800CC8614 /* SupportingFiles */,
 			);
 			path = BreathMeasuring;
 			sourceTree = "<group>";
@@ -71,6 +69,24 @@
 				4F2CEE692A428C7A00CC8614 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F2CEE742A428FF800CC8614 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4F2CEE652A428C7A00CC8614 /* Assets.xcassets */,
+				4F2CEE672A428C7A00CC8614 /* BreathMeasuring.entitlements */,
+				4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4F2CEE752A42901000CC8614 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F2CEE632A428C7800CC8614 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/BreathMeasuring.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/SupportingFiles/BreathMeasuring.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BreathMeasuring/Preview Content\"";
@@ -313,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/BreathMeasuring.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/SupportingFiles/BreathMeasuring.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BreathMeasuring/Preview Content\"";
