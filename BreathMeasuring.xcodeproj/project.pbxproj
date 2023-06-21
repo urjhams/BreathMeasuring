@@ -11,6 +11,7 @@
 		4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE632A428C7800CC8614 /* ContentView.swift */; };
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
 		4F2CEE6A2A428C7A00CC8614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE692A428C7A00CC8614 /* Preview Assets.xcassets */; };
+		4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2CEE712A428DAF00CC8614 /* BreathObsever */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = BreathMeasuring;
+			packageProductDependencies = (
+				4F2CEE712A428DAF00CC8614 /* BreathObsever */,
+			);
 			productName = BreathMeasuring;
 			productReference = 4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 4F2CEE552A428C7800CC8614;
+			packageReferences = (
+				4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */,
+			);
 			productRefGroup = 4F2CEE5F2A428C7800CC8614 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,6 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,6 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -354,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:urjhams/BreathObsever.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F2CEE712A428DAF00CC8614 /* BreathObsever */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */;
+			productName = BreathObsever;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F2CEE562A428C7800CC8614 /* Project object */;
 }
