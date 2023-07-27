@@ -21,6 +21,7 @@ struct ContentView: View {
         breathObserver.isTracking.toggle()
       }
       .onReceive(breathObserver.$convertedPowerLevel) { powerLevel in
+        // TODO: need audio processing (?)
         print("🙆🏻🙆🏻🙆🏻 \(powerLevel)")
       }
       
