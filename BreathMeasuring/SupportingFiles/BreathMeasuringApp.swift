@@ -11,8 +11,7 @@ import SwiftUI
 struct BreathMeasuringApp: App {
   var body: some Scene {
     WindowGroup {
-      //ContentView()
-      LineChartView()
+      ContentView()
     }
   }
 }

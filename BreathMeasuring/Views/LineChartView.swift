@@ -7,21 +7,58 @@
 
 import SwiftUI
 import Charts
+import Combine
 
 struct LineChartView: View {
   @State var data: [Int] = []
   
-  var body: some View {
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+  @State var timer: AnyPublisher<Date, Never>
+  
+  /// we will use 0 as the mark of no new data, so just accept the value that higher than 0
+  @Binding var latestData: Int
+  
+  let dataRange: UInt
+  
+  @Binding var tracking: Bool
     
-    Chart(Array(data.enumerated()), id: \.0) { index, magnitude in
-      LineMark(x: .value("index", String(index)) , y: .value("power", magnitude))
+  var body: some View {
+    
+    GroupBox("Breathing peaks") {
+      Chart(Array(data.enumerated()), id: \.0) { index, magnitude in
+        LineMark(x: .value("index", String(index)) , y: .value("power", magnitude))
+          .interpolationMethod(.catmullRom)
+          .accessibilityLabel("\(index.description)")
+      }
+      .onReceive(timer, perform: updateData(_:))
+      .padding()
     }
-    .onReceive(timer, perform: updateData(_:))
-    .padding()
   }
   
-  private func updateData(_ date: Date) {
-    data.append(.random(in: 1...100000))
+  public func updateData(_ date: Date) {
+    
+    guard tracking else {
+      if !data.isEmpty {
+        clearData()
+      }
+      return
+    }
+    
+    guard latestData > 0 else {
+      return
+    }
+    
+    if data.count == Int(dataRange) {
+      data.removeFirst()
+    }
+    // TODO: might use Fourier transform?
+    // TODO: https://medium.com/theengineeringgecko/finding-a-peak-f2d833525d31
+    data.append(latestData)
+    
+    // reset the latestData
+    latestData = 0
+  }
+  
+  public func clearData() {
+    data = []
   }
 }
