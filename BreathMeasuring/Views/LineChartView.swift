@@ -29,6 +29,7 @@ struct LineChartView: View {
           .interpolationMethod(.catmullRom)
           .accessibilityLabel("\(index.description)")
       }
+      .chartXAxis(.hidden)
       .onReceive(timer, perform: updateData(_:))
       .padding()
     }

@@ -18,6 +18,8 @@ struct ContentView: View {
   
   @State var tracking: Bool = false
   
+  @State var logText: String = ""
+  
   // breath observer
   @ObservedObject private var breathObserver = BreathObsever()
   
@@ -43,15 +45,28 @@ struct ContentView: View {
         tracking = breathObserver.isTracking
       }
       
+      TextEditor(text: $logText)
+        .padding(.all, 8)
+        .cornerRadius(3)
+      
       // TODO: implement something relate to applw watch
       // TODO: combine with cognitive load result from BreathObserver
       // TODO: add the 2 results above to the session (as CSV(?)) and store on Firebase.
     }
     .padding()
     .onAppear {
-      try? breathObserver.assignTimer(timer: timer)
+      do {
+        try breathObserver.setupAudioRecorder()
+        try breathObserver.assignTimer(timer: timer)
+      } catch {
+        let mess = error.localizedDescription
+        if logText.isEmpty {
+          logText = mess
+        } else {
+          logText += "\n\(mess)"
+        }
+      }
     }
-    
   }
 }
 
