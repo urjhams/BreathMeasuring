@@ -9,10 +9,12 @@ import SwiftUI
 import BreathObsever
 import Combine
 
+let updateCycle: TimeInterval = 0.05
+
 struct ContentView: View {
   
   @State var timer = Timer
-    .publish(every: 0.05, on: .main, in: .default)
+    .publish(every: updateCycle, on: .main, in: .default)
     .autoconnect()
     .eraseToAnyPublisher()
   
@@ -21,7 +23,7 @@ struct ContentView: View {
   @State var logText: String = ""
   
   // breath observer
-  @ObservedObject private var breathObserver = BreathObsever()
+  @ObservedObject private var breathObserver = BreathObsever(cycle: updateCycle)
   
   var body: some View {
     VStack {
@@ -41,6 +43,16 @@ struct ContentView: View {
         guard breathObserver.hasTimer else {
           return
         }
+        do {
+          if breathObserver.isTracking {
+            breathObserver.deallocateTimer()
+          } else {
+            try breathObserver.assignTimer(timer: timer)
+          }
+        } catch {
+          
+        }
+        
         breathObserver.isTracking.toggle()
         tracking = breathObserver.isTracking
       }
@@ -54,19 +66,6 @@ struct ContentView: View {
       // TODO: add the 2 results above to the session (as CSV(?)) and store on Firebase.
     }
     .padding()
-    .onAppear {
-      do {
-        try breathObserver.setupAudioRecorder()
-        try breathObserver.assignTimer(timer: timer)
-      } catch {
-        let mess = error.localizedDescription
-        if logText.isEmpty {
-          logText = mess
-        } else {
-          logText += "\n\(mess)"
-        }
-      }
-    }
   }
 }
 
