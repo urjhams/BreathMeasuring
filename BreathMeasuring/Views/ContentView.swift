@@ -11,6 +11,8 @@ import Combine
 
 let updateCycle: TimeInterval = 0.05
 
+var analyzingTime: TimeInterval = 5 * 60
+
 struct ContentView: View {
   
   @State var timer = Timer
@@ -23,7 +25,7 @@ struct ContentView: View {
   @State var logText: String = ""
   
   // breath observer
-  @ObservedObject private var breathObserver = BreathObsever(cycle: updateCycle)
+  @ObservedObject private var breathObserver = BreathObsever(cycle: updateCycle, end: analyzingTime)
   
   var body: some View {
     VStack {
@@ -40,9 +42,6 @@ struct ContentView: View {
       // TODO: button will start a session
       // https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts
       Button(breathObserver.isTracking ? "Stop monitoring" : "Start monitoring") {
-        guard breathObserver.hasTimer else {
-          return
-        }
         do {
           if breathObserver.isTracking {
             breathObserver.deallocateTimer()
@@ -50,7 +49,11 @@ struct ContentView: View {
             try breathObserver.assignTimer(timer: timer)
           }
         } catch {
-          logText += "❗️ \(error.localizedDescription)"
+          logText += "\n❗️ \(error.localizedDescription)"
+        }
+        
+        guard breathObserver.hasTimer else {
+          return breathObserver.deallocateTimer()
         }
         
         breathObserver.isTracking.toggle()
