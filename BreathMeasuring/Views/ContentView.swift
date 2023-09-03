@@ -50,12 +50,13 @@ struct ContentView: View {
             try breathObserver.assignTimer(timer: timer)
           }
         } catch {
-          
+          logText += "❗️ \(error.localizedDescription)"
         }
         
         breathObserver.isTracking.toggle()
         tracking = breathObserver.isTracking
       }
+      .foregroundColor(breathObserver.sessionAvailable ? .blue : .red)
       
       TextEditor(text: $logText)
         .padding(.all, 8)
