@@ -20,8 +20,17 @@ struct ContentView: View {
     VStack {
       HStack {
         Button {
-          running ? observer.stopProcess() : observer.startProcess()
-          running.toggle()
+          if running {
+            observer.stopProcess()
+            running.toggle()
+          } else {
+            do {
+              try observer.startProcess()
+              running = true
+            } catch {
+              running = false
+            }
+          }
         } label: {
           Image(systemName: running ? "square.fill" : "play.fill")
             .font(.largeTitle)
