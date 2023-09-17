@@ -7,23 +7,36 @@
 
 import SwiftUI
 import BreathObsever
+import Combine
 
 struct ContentView: View {
   
   @State var running = false
 
   // breath observer
-  private var breathObserver = BreathObsever()
+  private var observer = BreathObsever()
   
   var body: some View {
     VStack {
-      
-      
-      Button(running ? "Stop" : "Start") {
-        running.toggle()
-        running ? breathObserver.startProcess() : breathObserver.stopProcess()
+      HStack {
+        Button {
+          running ? observer.stopProcess() : observer.startProcess()
+          running.toggle()
+        } label: {
+          Image(systemName: running ? "square.fill" : "play.fill")
+            .font(.largeTitle)
+            .foregroundColor(.accentColor)
+        }
       }
-
+    }
+    .onReceive(
+      Publishers.CombineLatest(observer.soundAnalysisSubject, observer.powerSubject)
+    ) { breathing, power in
+      // TODO: handle the combine value of sound classfy result and fft result
+      Task { @MainActor in
+        // breathing is in around between -85 to -60 (~64 when almost snooring, breathing loud)
+        print("🎉 power: \(Int(power)) db - breath: \(breathing.confidence)%")
+      }
     }
     .padding()
   }
