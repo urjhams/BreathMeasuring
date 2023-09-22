@@ -2,11 +2,17 @@ import HealthKit
 import Combine
 import SwiftUI
 
-public final class ECGReader: NSObject, ObservableObject {
+public struct HeartRate: Hashable, Identifiable {
+  public var id = UUID()
+  public var value: Double
+  public var date: Date
+}
+
+public final class HeartRateObserver: NSObject, ObservableObject {
   
   @Published public var isAvailable = false
-  
-  @Published public var heartRate = 0.0
+    
+  public var observedSubject = PassthroughSubject<HeartRate?, Never>()
   
   private var healthStore: HKHealthStore?
   
@@ -15,7 +21,7 @@ public final class ECGReader: NSObject, ObservableObject {
   }
 }
 
-extension ECGReader {
+extension HeartRateObserver {
   public func start() {
     
     guard HKHealthStore.isHealthDataAvailable() else {
@@ -47,11 +53,12 @@ extension ECGReader {
   }
   
   public func stop() {
+    observedSubject.send(nil)
     healthStore = nil
   }
 }
 
-extension ECGReader {
+extension HeartRateObserver {
   
   private func process() {
     // Set up the predicate source from current device (Apple watch)
@@ -69,12 +76,18 @@ extension ECGReader {
       anchor: nil,
       limit: HKObjectQueryNoLimit
     ) { query, samples, deletedObjects, anchor, error in
-      samples?.forEach { [weak self] sample in
+      samples?.forEach { sample in
         guard let sample = sample as? HKQuantitySample else {
           return
         }
+        
         let heartRateUnit = HKUnit(from: "count/min")
-        self?.heartRate = sample.quantity.doubleValue(for: heartRateUnit)
+        let value = sample.quantity.doubleValue(for: heartRateUnit)
+        
+        Task { @MainActor [weak self] in
+          let heartRate = HeartRate(value: value, date: sample.startDate)
+          self?.observedSubject.send(heartRate)
+        }
       }
     }
     
