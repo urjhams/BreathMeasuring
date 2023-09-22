@@ -13,6 +13,7 @@
 		4F25C28C2ABE1AB50049F1B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */; };
 		4F25C28F2ABE1AB50049F1B3 /* ECG Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4F25C2822ABE1AB40049F1B3 /* ECG Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4F25C2982ABE36FB0049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2972ABE36FB0049F1B3 /* HeartRateObserver */; };
+		4F25C29A2ABE3C600049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */; };
 		4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */; };
 		4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE632A428C7800CC8614 /* ContentView.swift */; };
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		4F25C2862ABE1AB40049F1B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
 		4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathMeasuring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathMeasuringApp.swift; sourceTree = "<group>"; };
 		4F2CEE632A428C7800CC8614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				4F25C2862ABE1AB40049F1B3 /* ContentView.swift */,
 				4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */,
 				4F25C28A2ABE1AB50049F1B3 /* Preview Content */,
+				4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */,
 			);
 			path = "ECG Watch App";
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				4F25C2872ABE1AB40049F1B3 /* ContentView.swift in Sources */,
 				4F25C2852ABE1AB40049F1B3 /* ECGApp.swift in Sources */,
+				4F25C29A2ABE3C600049F1B3 /* ConnectivityCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

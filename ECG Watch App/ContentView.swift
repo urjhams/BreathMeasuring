@@ -15,7 +15,9 @@ enum InterfaceState {
 
 struct ContentView: View {
   
-  var observer = HeartRateObserver()
+  let observer = HeartRateObserver()
+  
+  let connectivity = ConnectivityCenter()
   
   @State var state: InterfaceState = .disable
   
@@ -34,7 +36,14 @@ struct ContentView: View {
       
       // TODO: send the heartRate to iOS app
     }
-    // TODO: recieve message from iOS app to start or stop the observing
+    .onReceive(connectivity.messageSubject) { message in
+      switch message {
+      case .start:
+        observer.start()
+      case .stop:
+        observer.stop()
+      }
+    }
     .padding()
   }
 }
