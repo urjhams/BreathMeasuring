@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "heartrateobserver",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:urjhams/HeartRateObserver.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7f760789b11f324486f86aa6375668f46d27df9c"
+      }
+    }
+  ],
+  "version" : 2
+}
