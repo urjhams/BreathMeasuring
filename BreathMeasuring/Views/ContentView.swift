@@ -12,9 +12,12 @@ import Combine
 struct ContentView: View {
   
   @State var running = false
-
+  
   // breath observer
-  private var observer = BreathObsever()
+  let observer = BreathObsever()
+  
+  // watch connectivity
+  let connectivity = ConnectivityCenter()
   
   var body: some View {
     VStack {
@@ -22,10 +25,12 @@ struct ContentView: View {
         Button {
           if running {
             observer.stopProcess()
+            connectivity.sendMessage(.stop)
             running.toggle()
           } else {
             do {
               try observer.startProcess()
+              connectivity.sendMessage(.start)
               running = true
             } catch {
               running = false
@@ -39,12 +44,16 @@ struct ContentView: View {
       }
     }
     .onReceive(
-      Publishers.CombineLatest(observer.soundAnalysisSubject, observer.powerSubject)
-    ) { breathing, power in
+      Publishers.CombineLatest3(
+        observer.soundAnalysisSubject,
+        observer.powerSubject,
+        connectivity.messageSubject
+      )
+    ) { breathing, power, heartRate in
       // TODO: handle the combine value of sound classfy result and fft result
       Task { @MainActor in
         // breathing is in around between -85 to -60 (~64 when almost snooring, breathing loud)
-        print("🎉 power: \(Int(power)) db - breath: \(breathing.confidence)%")
+        print("🎉 power: \(Int(power)) db - breath: \(breathing.confidence)% - heart rate: \(heartRate.int)")
       }
     }
     .padding()

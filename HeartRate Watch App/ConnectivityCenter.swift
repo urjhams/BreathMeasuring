@@ -16,20 +16,22 @@ final class ConnectivityCenter: NSObject {
 }
 
 extension ConnectivityCenter {
-  public func sendMessage(_ heartRate: HeartRate) {
-    guard session.isReachable else {
+  public func sendData(_ heartRate: HeartRate) {
+    guard session.isReachable, let data = heartRate.data else {
       return
     }
     
-    let data = [HeartRate.messageIdentifier : heartRate as Any]
-    session.sendMessage(data, replyHandler: nil)
+    session.sendMessageData(data, replyHandler: nil)
   }
 }
 
 extension ConnectivityCenter: WCSessionDelegate {
   func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
     typealias Command = HeartRateObservingCommand
-    guard let command = message[Command.messageIdentifier] as? Command else {
+    guard
+      let command = message[Command.messageIdentifier] as? String,
+        let command = Command(rawValue: command)
+    else {
       return
     }
     messageSubject.send(command)

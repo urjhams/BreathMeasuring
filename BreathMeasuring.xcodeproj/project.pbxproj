@@ -14,6 +14,8 @@
 		4F25C2AD2ABE4A360049F1B3 /* HeartRate Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4F25C2B32ABE4A970049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */; };
 		4F25C2B72ABE4B6F0049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */; };
+		4F25C2B92ABE4BD00049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */; };
+		4F25C2BB2ABE4C350049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */; };
 		4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */; };
 		4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE632A428C7800CC8614 /* ContentView.swift */; };
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
@@ -56,6 +58,7 @@
 		4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
 		4F25C2B42ABE4AC60049F1B3 /* HeartRate Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HeartRate Watch App.entitlements"; sourceTree = "<group>"; };
+		4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
 		4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathMeasuring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathMeasuringApp.swift; sourceTree = "<group>"; };
 		4F2CEE632A428C7800CC8614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */,
+				4F25C2BB2ABE4C350049F1B3 /* HeartRateObserver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +155,7 @@
 				4F2CEE752A42901000CC8614 /* Views */,
 				4F2CEE682A428C7A00CC8614 /* Preview Content */,
 				4F2CEE742A428FF800CC8614 /* SupportingFiles */,
+				4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */,
 			);
 			path = BreathMeasuring;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			name = BreathMeasuring;
 			packageProductDependencies = (
 				4F2CEE712A428DAF00CC8614 /* BreathObsever */,
+				4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */,
 			);
 			productName = BreathMeasuring;
 			productReference = 4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */;
@@ -312,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F25C2B92ABE4BD00049F1B3 /* ConnectivityCenter.swift in Sources */,
 				4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */,
 				4F2CEE782A4291D900CC8614 /* Extensions.swift in Sources */,
 				4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */,
@@ -672,6 +679,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */;
+			productName = HeartRateObserver;
+		};
+		4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */;
 			productName = HeartRateObserver;

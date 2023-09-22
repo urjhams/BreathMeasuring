@@ -23,7 +23,7 @@ struct ContentView: View {
   
   var body: some View {
     VStack {
-      Image(systemName: state == .measuring ? "heart.fill" : "suit.geart")
+      Image(systemName: state == .measuring ? "heart.fill" : "suit.heart")
         .imageScale(.large)
         .foregroundStyle(state == .measuring ? .red : .gray)
     }
@@ -35,7 +35,7 @@ struct ContentView: View {
       state = .measuring
       
       // send the heartRate to iOS app
-      connectivity.sendMessage(heartRate)
+      connectivity.sendData(heartRate)
     }
     .onReceive(connectivity.messageSubject) { message in
       switch message {
