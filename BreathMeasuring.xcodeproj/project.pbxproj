@@ -89,11 +89,9 @@
 		4F25C2832ABE1AB40049F1B3 /* ECG Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				4F25C2842ABE1AB40049F1B3 /* ECGApp.swift */,
 				4F25C2862ABE1AB40049F1B3 /* ContentView.swift */,
-				4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */,
-				4F25C28A2ABE1AB50049F1B3 /* Preview Content */,
 				4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */,
+				4F25C29B2ABE48760049F1B3 /* SupportingFiles */,
 			);
 			path = "ECG Watch App";
 			sourceTree = "<group>";
@@ -104,6 +102,16 @@
 				4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F25C29B2ABE48760049F1B3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4F25C2842ABE1AB40049F1B3 /* ECGApp.swift */,
+				4F25C28A2ABE1AB50049F1B3 /* Preview Content */,
+				4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		4F2CEE552A428C7800CC8614 = {
