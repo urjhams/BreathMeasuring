@@ -14,15 +14,15 @@ public final class ECGReader: NSObject, ObservableObject {
   
   public override init() {
     super.init()
-    isAvailable = authorize()
+    authorize()
   }
 }
 
 extension ECGReader {
-  private func authorize() -> Bool {
+  private func authorize() {
     
     guard HKHealthStore.isHealthDataAvailable() else {
-      return false
+      return
     }
     
     let newHealthStore = HKHealthStore()
@@ -31,19 +31,18 @@ extension ECGReader {
     guard 
       let desiredType = [HKObjectType.quantityType(forIdentifier: .heartRate)] as? Set<HKSampleType>
     else {
-      return false
+      return
     }
     
-    newHealthStore.getRequestStatusForAuthorization(
-      toShare: desiredType,
-      read: desiredType
-    ) { [weak self] _, error in
-      guard error == nil else {
-        self?.isAvailable = false
-        return
+    isAvailable = true
+    
+    // request authorization to access heart rate data
+    newHealthStore
+      .requestAuthorization(toShare: desiredType, read: desiredType) { [weak self] success, error in
+        guard success, error == nil else {
+          self?.isAvailable = false
+          return
+        }
       }
-    }
-    
-    return true
   }
 }
