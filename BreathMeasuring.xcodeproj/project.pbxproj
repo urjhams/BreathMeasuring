@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F25C2852ABE1AB40049F1B3 /* ECGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2842ABE1AB40049F1B3 /* ECGApp.swift */; };
-		4F25C2872ABE1AB40049F1B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2862ABE1AB40049F1B3 /* ContentView.swift */; };
-		4F25C2892ABE1AB50049F1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */; };
-		4F25C28C2ABE1AB50049F1B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */; };
-		4F25C28F2ABE1AB50049F1B3 /* ECG Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4F25C2822ABE1AB40049F1B3 /* ECG Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4F25C2982ABE36FB0049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2972ABE36FB0049F1B3 /* HeartRateObserver */; };
-		4F25C29A2ABE3C600049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */; };
+		4F25C2A32ABE4A350049F1B3 /* HeartRateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */; };
+		4F25C2A52ABE4A350049F1B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2A42ABE4A350049F1B3 /* ContentView.swift */; };
+		4F25C2A72ABE4A360049F1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */; };
+		4F25C2AA2ABE4A360049F1B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */; };
+		4F25C2AD2ABE4A360049F1B3 /* HeartRate Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4F25C2B32ABE4A970049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */; };
+		4F25C2B72ABE4B6F0049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */; };
 		4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */; };
 		4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE632A428C7800CC8614 /* ContentView.swift */; };
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
@@ -24,12 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4F25C28D2ABE1AB50049F1B3 /* PBXContainerItemProxy */ = {
+		4F25C2AB2ABE4A360049F1B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4F2CEE562A428C7800CC8614 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F25C2812ABE1AB40049F1B3;
-			remoteInfo = "ECG Watch App";
+			remoteGlobalIDString = 4F25C29F2ABE4A350049F1B3;
+			remoteInfo = "HeartRate Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,7 +40,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				4F25C28F2ABE1AB50049F1B3 /* ECG Watch App.app in Embed Watch Content */,
+				4F25C2AD2ABE4A360049F1B3 /* HeartRate Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,12 +49,13 @@
 
 /* Begin PBXFileReference section */
 		4F22DD372A42A9B300798446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4F25C2822ABE1AB40049F1B3 /* ECG Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECG Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F25C2842ABE1AB40049F1B3 /* ECGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGApp.swift; sourceTree = "<group>"; };
-		4F25C2862ABE1AB40049F1B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
+		4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeartRate Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateApp.swift; sourceTree = "<group>"; };
+		4F25C2A42ABE4A350049F1B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
+		4F25C2B42ABE4AC60049F1B3 /* HeartRate Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HeartRate Watch App.entitlements"; sourceTree = "<group>"; };
 		4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathMeasuring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathMeasuringApp.swift; sourceTree = "<group>"; };
 		4F2CEE632A428C7800CC8614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,11 +68,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F25C27F2ABE1AB40049F1B3 /* Frameworks */ = {
+		4F25C29D2ABE4A350049F1B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F25C2982ABE36FB0049F1B3 /* HeartRateObserver in Frameworks */,
+				4F25C2B72ABE4B6F0049F1B3 /* HeartRateObserver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,32 +87,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F25C2832ABE1AB40049F1B3 /* ECG Watch App */ = {
+		4F25C2A12ABE4A350049F1B3 /* HeartRate Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				4F25C2862ABE1AB40049F1B3 /* ContentView.swift */,
-				4F25C2992ABE3C600049F1B3 /* ConnectivityCenter.swift */,
-				4F25C29B2ABE48760049F1B3 /* SupportingFiles */,
+				4F25C2B42ABE4AC60049F1B3 /* HeartRate Watch App.entitlements */,
+				4F25C2A42ABE4A350049F1B3 /* ContentView.swift */,
+				4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */,
+				4F25C2B12ABE4A440049F1B3 /* SupportingFiles */,
 			);
-			path = "ECG Watch App";
+			path = "HeartRate Watch App";
 			sourceTree = "<group>";
 		};
-		4F25C28A2ABE1AB50049F1B3 /* Preview Content */ = {
+		4F25C2A82ABE4A360049F1B3 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4F25C28B2ABE1AB50049F1B3 /* Preview Assets.xcassets */,
+				4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4F25C29B2ABE48760049F1B3 /* SupportingFiles */ = {
+		4F25C2B12ABE4A440049F1B3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				4F25C2842ABE1AB40049F1B3 /* ECGApp.swift */,
-				4F25C28A2ABE1AB50049F1B3 /* Preview Content */,
-				4F25C2882ABE1AB50049F1B3 /* Assets.xcassets */,
+				4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */,
+				4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */,
+				4F25C2A82ABE4A360049F1B3 /* Preview Content */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4F25C2B52ABE4B6F0049F1B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4F2CEE552A428C7800CC8614 = {
@@ -119,8 +128,9 @@
 			children = (
 				4F2CEE732A428E0E00CC8614 /* BreathObsever */,
 				4F2CEE602A428C7800CC8614 /* BreathMeasuring */,
-				4F25C2832ABE1AB40049F1B3 /* ECG Watch App */,
+				4F25C2A12ABE4A350049F1B3 /* HeartRate Watch App */,
 				4F2CEE5F2A428C7800CC8614 /* Products */,
+				4F25C2B52ABE4B6F0049F1B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */,
-				4F25C2822ABE1AB40049F1B3 /* ECG Watch App.app */,
+				4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,24 +193,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F25C2812ABE1AB40049F1B3 /* ECG Watch App */ = {
+		4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F25C2932ABE1AB50049F1B3 /* Build configuration list for PBXNativeTarget "ECG Watch App" */;
+			buildConfigurationList = 4F25C2AE2ABE4A360049F1B3 /* Build configuration list for PBXNativeTarget "HeartRate Watch App" */;
 			buildPhases = (
-				4F25C27E2ABE1AB40049F1B3 /* Sources */,
-				4F25C27F2ABE1AB40049F1B3 /* Frameworks */,
-				4F25C2802ABE1AB40049F1B3 /* Resources */,
+				4F25C29C2ABE4A350049F1B3 /* Sources */,
+				4F25C29D2ABE4A350049F1B3 /* Frameworks */,
+				4F25C29E2ABE4A350049F1B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ECG Watch App";
+			name = "HeartRate Watch App";
 			packageProductDependencies = (
-				4F25C2972ABE36FB0049F1B3 /* HeartRateObserver */,
+				4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */,
 			);
-			productName = "ECG Watch App";
-			productReference = 4F25C2822ABE1AB40049F1B3 /* ECG Watch App.app */;
+			productName = "HeartRate Watch App";
+			productReference = 4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4F2CEE5D2A428C7800CC8614 /* BreathMeasuring */ = {
@@ -215,7 +225,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4F25C28E2ABE1AB50049F1B3 /* PBXTargetDependency */,
+				4F25C2AC2ABE4A360049F1B3 /* PBXTargetDependency */,
 			);
 			name = BreathMeasuring;
 			packageProductDependencies = (
@@ -233,9 +243,9 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					4F25C2812ABE1AB40049F1B3 = {
+					4F25C29F2ABE4A350049F1B3 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 					4F2CEE5D2A428C7800CC8614 = {
@@ -261,18 +271,18 @@
 			projectRoot = "";
 			targets = (
 				4F2CEE5D2A428C7800CC8614 /* BreathMeasuring */,
-				4F25C2812ABE1AB40049F1B3 /* ECG Watch App */,
+				4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F25C2802ABE1AB40049F1B3 /* Resources */ = {
+		4F25C29E2ABE4A350049F1B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F25C28C2ABE1AB50049F1B3 /* Preview Assets.xcassets in Resources */,
-				4F25C2892ABE1AB50049F1B3 /* Assets.xcassets in Resources */,
+				4F25C2AA2ABE4A360049F1B3 /* Preview Assets.xcassets in Resources */,
+				4F25C2A72ABE4A360049F1B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,13 +298,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F25C27E2ABE1AB40049F1B3 /* Sources */ = {
+		4F25C29C2ABE4A350049F1B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F25C2872ABE1AB40049F1B3 /* ContentView.swift in Sources */,
-				4F25C2852ABE1AB40049F1B3 /* ECGApp.swift in Sources */,
-				4F25C29A2ABE3C600049F1B3 /* ConnectivityCenter.swift in Sources */,
+				4F25C2A52ABE4A350049F1B3 /* ContentView.swift in Sources */,
+				4F25C2B32ABE4A970049F1B3 /* ConnectivityCenter.swift in Sources */,
+				4F25C2A32ABE4A350049F1B3 /* HeartRateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,31 +322,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F25C28E2ABE1AB50049F1B3 /* PBXTargetDependency */ = {
+		4F25C2AC2ABE4A360049F1B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4F25C2812ABE1AB40049F1B3 /* ECG Watch App */;
-			targetProxy = 4F25C28D2ABE1AB50049F1B3 /* PBXContainerItemProxy */;
+			target = 4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */;
+			targetProxy = 4F25C2AB2ABE4A360049F1B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4F25C2912ABE1AB50049F1B3 /* Debug */ = {
+		4F25C2AF2ABE4A360049F1B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HeartRate Watch App/HeartRate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ECG Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HeartRate Watch App/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = TX9R26AVUZ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ECG;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Track ECG data";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share the ECG data with iOS companion app.";
+				INFOPLIST_KEY_CFBundleDisplayName = HeartRate;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Send Heart rate to iOS companion App";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Might need to update data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.quan.sample.BreathMeasuring;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,23 +369,25 @@
 			};
 			name = Debug;
 		};
-		4F25C2922ABE1AB50049F1B3 /* Release */ = {
+		4F25C2B02ABE4A360049F1B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HeartRate Watch App/HeartRate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ECG Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HeartRate Watch App/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = TX9R26AVUZ;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ECG;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Track ECG data";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Share the ECG data with iOS companion app.";
+				INFOPLIST_KEY_CFBundleDisplayName = HeartRate;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Heart rate";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Send Heart rate to iOS companion App";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Might need to update data";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.quan.sample.BreathMeasuring;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -458,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -606,11 +622,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F25C2932ABE1AB50049F1B3 /* Build configuration list for PBXNativeTarget "ECG Watch App" */ = {
+		4F25C2AE2ABE4A360049F1B3 /* Build configuration list for PBXNativeTarget "HeartRate Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F25C2912ABE1AB50049F1B3 /* Debug */,
-				4F25C2922ABE1AB50049F1B3 /* Release */,
+				4F25C2AF2ABE4A360049F1B3 /* Debug */,
+				4F25C2B02ABE4A360049F1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -655,7 +671,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F25C2972ABE36FB0049F1B3 /* HeartRateObserver */ = {
+		4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */;
 			productName = HeartRateObserver;
