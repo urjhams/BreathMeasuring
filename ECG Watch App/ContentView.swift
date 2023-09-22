@@ -34,7 +34,8 @@ struct ContentView: View {
       }
       state = .measuring
       
-      // TODO: send the heartRate to iOS app
+      // send the heartRate to iOS app
+      connectivity.sendMessage(heartRate)
     }
     .onReceive(connectivity.messageSubject) { message in
       switch message {
