@@ -6,7 +6,7 @@ public final class ECGReader: NSObject, ObservableObject {
   
   @Published public var isAvailable = false
   
-  @Published public var value = 0.0
+  @Published public var heartRate = 0.0
   
   private var healthStore: HKHealthStore?
   
@@ -73,8 +73,8 @@ extension ECGReader {
         guard let sample = sample as? HKQuantitySample else {
           return
         }
-        let hearRateQuantity = HKUnit(from: "count/min")
-        self?.value = sample.quantity.doubleValue(for: hearRateQuantity)
+        let heartRateUnit = HKUnit(from: "count/min")
+        self?.heartRate = sample.quantity.doubleValue(for: heartRateUnit)
       }
     }
     
