@@ -34,7 +34,9 @@ extension ConnectivityCenter: WCSessionDelegate {
     else {
       return
     }
-    messageSubject.send(command)
+    Task { @MainActor [weak self] in
+      self?.messageSubject.send(command)
+    }
   }
   
   func session(

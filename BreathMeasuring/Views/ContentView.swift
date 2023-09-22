@@ -50,6 +50,9 @@ struct ContentView: View {
         connectivity.messageSubject
       )
     ) { breathing, power, heartRate in
+      guard !power.isNaN, !power.isInfinite else {
+        return
+      }
       // TODO: handle the combine value of sound classfy result and fft result
       Task { @MainActor in
         // breathing is in around between -85 to -60 (~64 when almost snooring, breathing loud)

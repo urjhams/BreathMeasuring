@@ -39,7 +39,9 @@ extension ConnectivityCenter: WCSessionDelegate {
     guard let heartRate = try? JSONDecoder().decode(HeartRate.self, from: messageData) else {
       return
     }
-    messageSubject.send(heartRate)
+    Task { @MainActor [weak self] in
+      self?.messageSubject.send(heartRate)
+    }
   }
   
   func session(
