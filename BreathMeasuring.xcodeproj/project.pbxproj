@@ -22,6 +22,7 @@
 		4F2CEE6A2A428C7A00CC8614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE692A428C7A00CC8614 /* Preview Assets.xcassets */; };
 		4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2CEE712A428DAF00CC8614 /* BreathObsever */; };
 		4F2CEE782A4291D900CC8614 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE772A4291D900CC8614 /* Extensions.swift */; };
+		4F862DF02ABF056F006C7984 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 4F862DEF2ABF056F006C7984 /* CombineExt */; };
 		4FDF23EE2A72AB9800F43F48 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF23ED2A72AB9800F43F48 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */,
+				4F862DF02ABF056F006C7984 /* CombineExt in Frameworks */,
 				4F25C2BB2ABE4C350049F1B3 /* HeartRateObserver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +238,7 @@
 			packageProductDependencies = (
 				4F2CEE712A428DAF00CC8614 /* BreathObsever */,
 				4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */,
+				4F862DEF2ABF056F006C7984 /* CombineExt */,
 			);
 			productName = BreathMeasuring;
 			productReference = 4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */;
@@ -271,6 +274,7 @@
 			packageReferences = (
 				4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */,
 				4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */,
+				4F862DEE2ABF056F006C7984 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = 4F2CEE5F2A428C7800CC8614 /* Products */;
 			projectDirPath = "";
@@ -675,6 +679,14 @@
 				kind = branch;
 			};
 		};
+		4F862DEE2ABF056F006C7984 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:CombineCommunity/CombineExt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -692,6 +704,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */;
 			productName = BreathObsever;
+		};
+		4F862DEF2ABF056F006C7984 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F862DEE2ABF056F006C7984 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

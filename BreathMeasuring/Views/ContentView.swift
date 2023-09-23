@@ -8,6 +8,7 @@
 import SwiftUI
 import BreathObsever
 import Combine
+import CombineExt
 
 struct ContentView: View {
   
@@ -44,8 +45,14 @@ struct ContentView: View {
       }
     }
     .onReceive(
-      observer.powerSubject.combineLatest(observer.soundAnalysisSubject, connectivity.messageSubject)
-    ) { power, breathing, heartRate in
+      observer.powerSubject.withLatestFrom(
+        observer.soundAnalysisSubject,
+        connectivity.messageSubject,
+        resultSelector: {
+          ($0, $1.0, $1.1)
+        }
+      )
+    ) { (power, breathing, heartRate) in
       guard !power.isNaN, !power.isInfinite else {
         return
       }
