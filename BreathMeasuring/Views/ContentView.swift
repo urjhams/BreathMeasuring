@@ -44,12 +44,8 @@ struct ContentView: View {
       }
     }
     .onReceive(
-      Publishers.CombineLatest3(
-        observer.soundAnalysisSubject,
-        observer.powerSubject,
-        connectivity.messageSubject
-      )
-    ) { breathing, power, heartRate in
+      observer.powerSubject.combineLatest(observer.soundAnalysisSubject, connectivity.messageSubject)
+    ) { power, breathing, heartRate in
       guard !power.isNaN, !power.isInfinite else {
         return
       }
