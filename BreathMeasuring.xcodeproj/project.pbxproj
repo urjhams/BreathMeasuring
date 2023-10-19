@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F25C2A32ABE4A350049F1B3 /* HeartRateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */; };
-		4F25C2A52ABE4A350049F1B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2A42ABE4A350049F1B3 /* ContentView.swift */; };
-		4F25C2A72ABE4A360049F1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */; };
-		4F25C2AA2ABE4A360049F1B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */; };
-		4F25C2AD2ABE4A360049F1B3 /* HeartRate Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4F25C2B32ABE4A970049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */; };
-		4F25C2B72ABE4B6F0049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */; };
-		4F25C2B92ABE4BD00049F1B3 /* ConnectivityCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */; };
-		4F25C2BB2ABE4C350049F1B3 /* HeartRateObserver in Frameworks */ = {isa = PBXBuildFile; productRef = 4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */; };
 		4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */; };
 		4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CEE632A428C7800CC8614 /* ContentView.swift */; };
 		4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CEE652A428C7A00CC8614 /* Assets.xcassets */; };
@@ -26,16 +17,6 @@
 		4FDF23EE2A72AB9800F43F48 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF23ED2A72AB9800F43F48 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4F25C2AB2ABE4A360049F1B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F2CEE562A428C7800CC8614 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F25C29F2ABE4A350049F1B3;
-			remoteInfo = "HeartRate Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		4F25C2902ABE1AB50049F1B3 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -43,7 +24,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				4F25C2AD2ABE4A360049F1B3 /* HeartRate Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,14 +32,6 @@
 
 /* Begin PBXFileReference section */
 		4F22DD372A42A9B300798446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeartRate Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateApp.swift; sourceTree = "<group>"; };
-		4F25C2A42ABE4A350049F1B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
-		4F25C2B42ABE4AC60049F1B3 /* HeartRate Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HeartRate Watch App.entitlements"; sourceTree = "<group>"; };
-		4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityCenter.swift; sourceTree = "<group>"; };
 		4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreathMeasuring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2CEE612A428C7800CC8614 /* BreathMeasuringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathMeasuringApp.swift; sourceTree = "<group>"; };
 		4F2CEE632A428C7800CC8614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,56 +44,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F25C29D2ABE4A350049F1B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F25C2B72ABE4B6F0049F1B3 /* HeartRateObserver in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F2CEE5B2A428C7800CC8614 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F2CEE722A428DAF00CC8614 /* BreathObsever in Frameworks */,
 				4F862DF02ABF056F006C7984 /* CombineExt in Frameworks */,
-				4F25C2BB2ABE4C350049F1B3 /* HeartRateObserver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F25C2A12ABE4A350049F1B3 /* HeartRate Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				4F25C2B42ABE4AC60049F1B3 /* HeartRate Watch App.entitlements */,
-				4F25C2A42ABE4A350049F1B3 /* ContentView.swift */,
-				4F25C2B22ABE4A970049F1B3 /* ConnectivityCenter.swift */,
-				4F25C2B12ABE4A440049F1B3 /* SupportingFiles */,
-			);
-			path = "HeartRate Watch App";
-			sourceTree = "<group>";
-		};
-		4F25C2A82ABE4A360049F1B3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4F25C2A92ABE4A360049F1B3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		4F25C2B12ABE4A440049F1B3 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				4F25C2A22ABE4A350049F1B3 /* HeartRateApp.swift */,
-				4F25C2A62ABE4A360049F1B3 /* Assets.xcassets */,
-				4F25C2A82ABE4A360049F1B3 /* Preview Content */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
 		4F25C2B52ABE4B6F0049F1B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +68,6 @@
 			children = (
 				4F2CEE732A428E0E00CC8614 /* BreathObsever */,
 				4F2CEE602A428C7800CC8614 /* BreathMeasuring */,
-				4F25C2A12ABE4A350049F1B3 /* HeartRate Watch App */,
 				4F2CEE5F2A428C7800CC8614 /* Products */,
 				4F25C2B52ABE4B6F0049F1B3 /* Frameworks */,
 			);
@@ -144,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				4F2CEE5E2A428C7800CC8614 /* BreathMeasuring.app */,
-				4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,7 +89,6 @@
 				4F2CEE752A42901000CC8614 /* Views */,
 				4F2CEE682A428C7A00CC8614 /* Preview Content */,
 				4F2CEE742A428FF800CC8614 /* SupportingFiles */,
-				4F25C2B82ABE4BD00049F1B3 /* ConnectivityCenter.swift */,
 			);
 			path = BreathMeasuring;
 			sourceTree = "<group>";
@@ -200,26 +131,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4F25C2AE2ABE4A360049F1B3 /* Build configuration list for PBXNativeTarget "HeartRate Watch App" */;
-			buildPhases = (
-				4F25C29C2ABE4A350049F1B3 /* Sources */,
-				4F25C29D2ABE4A350049F1B3 /* Frameworks */,
-				4F25C29E2ABE4A350049F1B3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HeartRate Watch App";
-			packageProductDependencies = (
-				4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */,
-			);
-			productName = "HeartRate Watch App";
-			productReference = 4F25C2A02ABE4A350049F1B3 /* HeartRate Watch App.app */;
-			productType = "com.apple.product-type.application";
-		};
 		4F2CEE5D2A428C7800CC8614 /* BreathMeasuring */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F2CEE6D2A428C7A00CC8614 /* Build configuration list for PBXNativeTarget "BreathMeasuring" */;
@@ -232,12 +143,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				4F25C2AC2ABE4A360049F1B3 /* PBXTargetDependency */,
 			);
 			name = BreathMeasuring;
 			packageProductDependencies = (
 				4F2CEE712A428DAF00CC8614 /* BreathObsever */,
-				4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */,
 				4F862DEF2ABF056F006C7984 /* CombineExt */,
 			);
 			productName = BreathMeasuring;
@@ -254,9 +163,6 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					4F25C29F2ABE4A350049F1B3 = {
-						CreatedOnToolsVersion = 15.0;
-					};
 					4F2CEE5D2A428C7800CC8614 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -273,7 +179,6 @@
 			mainGroup = 4F2CEE552A428C7800CC8614;
 			packageReferences = (
 				4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */,
-				4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */,
 				4F862DEE2ABF056F006C7984 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = 4F2CEE5F2A428C7800CC8614 /* Products */;
@@ -281,21 +186,11 @@
 			projectRoot = "";
 			targets = (
 				4F2CEE5D2A428C7800CC8614 /* BreathMeasuring */,
-				4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F25C29E2ABE4A350049F1B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F25C2AA2ABE4A360049F1B3 /* Preview Assets.xcassets in Resources */,
-				4F25C2A72ABE4A360049F1B3 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F2CEE5C2A428C7800CC8614 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,21 +203,10 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F25C29C2ABE4A350049F1B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F25C2A52ABE4A350049F1B3 /* ContentView.swift in Sources */,
-				4F25C2B32ABE4A970049F1B3 /* ConnectivityCenter.swift in Sources */,
-				4F25C2A32ABE4A350049F1B3 /* HeartRateApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F2CEE5A2A428C7800CC8614 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F25C2B92ABE4BD00049F1B3 /* ConnectivityCenter.swift in Sources */,
 				4F2CEE642A428C7800CC8614 /* ContentView.swift in Sources */,
 				4F2CEE782A4291D900CC8614 /* Extensions.swift in Sources */,
 				4F2CEE622A428C7800CC8614 /* BreathMeasuringApp.swift in Sources */,
@@ -332,93 +216,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		4F25C2AC2ABE4A360049F1B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F25C29F2ABE4A350049F1B3 /* HeartRate Watch App */;
-			targetProxy = 4F25C2AB2ABE4A360049F1B3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4F25C2AF2ABE4A360049F1B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "HeartRate Watch App/HeartRate Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HeartRate Watch App/SupportingFiles/Preview Content\"";
-				DEVELOPMENT_TEAM = TX9R26AVUZ;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = HeartRate;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Heart rate";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Send Heart rate to iOS companion App";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Might need to update data";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.quan.sample.BreathMeasuring;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quan.sample.BreathMeasuring.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Debug;
-		};
-		4F25C2B02ABE4A360049F1B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "HeartRate Watch App/HeartRate Watch App.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HeartRate Watch App/SupportingFiles/Preview Content\"";
-				DEVELOPMENT_TEAM = TX9R26AVUZ;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = HeartRate;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Record Heart rate";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Send Heart rate to iOS companion App";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Might need to update data";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.quan.sample.BreathMeasuring;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quan.sample.BreathMeasuring.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
-			};
-			name = Release;
-		};
 		4F2CEE6B2A428C7A00CC8614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -537,7 +335,6 @@
 		4F2CEE6E2A428C7A00CC8614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/SupportingFiles/BreathMeasuring.entitlements;
@@ -585,7 +382,6 @@
 		4F2CEE6F2A428C7A00CC8614 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BreathMeasuring/SupportingFiles/BreathMeasuring.entitlements;
@@ -633,15 +429,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F25C2AE2ABE4A360049F1B3 /* Build configuration list for PBXNativeTarget "HeartRate Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4F25C2AF2ABE4A360049F1B3 /* Debug */,
-				4F25C2B02ABE4A360049F1B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4F2CEE592A428C7800CC8614 /* Build configuration list for PBXProject "BreathMeasuring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -663,14 +450,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:urjhams/HeartRateObserver.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:urjhams/BreathObsever.git";
@@ -690,16 +469,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F25C2B62ABE4B6F0049F1B3 /* HeartRateObserver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */;
-			productName = HeartRateObserver;
-		};
-		4F25C2BA2ABE4C350049F1B3 /* HeartRateObserver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4F25C2962ABE36FB0049F1B3 /* XCRemoteSwiftPackageReference "HeartRateObserver" */;
-			productName = HeartRateObserver;
-		};
 		4F2CEE712A428DAF00CC8614 /* BreathObsever */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4F2CEE702A428DAF00CC8614 /* XCRemoteSwiftPackageReference "BreathObsever" */;

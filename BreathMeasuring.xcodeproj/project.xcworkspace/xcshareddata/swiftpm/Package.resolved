@@ -8,15 +8,6 @@
         "revision" : "d7b896fa9ca8b47fa7bcde6b43ef9b70bf8c1f56",
         "version" : "1.8.1"
       }
-    },
-    {
-      "identity" : "heartrateobserver",
-      "kind" : "remoteSourceControl",
-      "location" : "git@github.com:urjhams/HeartRateObserver.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "de6ef4d1bfe5ed0c4a3d5e63d3361c2debe1b609"
-      }
     }
   ],
   "version" : 2
