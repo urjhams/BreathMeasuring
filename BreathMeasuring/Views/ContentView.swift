@@ -57,7 +57,10 @@ struct ContentView: View {
       }
       .frame(height: 80 * offSet)
     }
+    // TODO: could we try to implement Tobii pro python sdk and combine the data with this?
     .onReceive(observer.amplitudeSubject) { value in
+      // scale up with 1000 because the data is something like 0,007. 
+      // So we would like it to start from 1 to around 80
       amplitudes.append(value * 1000)
     }
     .padding()
