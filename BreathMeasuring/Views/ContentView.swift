@@ -17,6 +17,8 @@ struct ContentView: View {
   @State var amplitudes = [Float]()
   
   private let offSet: CGFloat = 3
+  
+  @State var available = true
     
   // breath observer
   let observer = BreathObsever()
@@ -31,14 +33,19 @@ struct ContentView: View {
             running = false
           } else {
             // start process
-            try? observer.startAnalyzing()
-            amplitudes = []
-            running = true
+            do {
+              try observer.startAnalyzing()
+              amplitudes = []
+              running = true
+              available = true
+            } catch {
+              available = false
+            }
           }
         } label: {
           Image(systemName: running ? "square.fill" : "play.fill")
             .font(.largeTitle)
-            .foregroundColor(.accentColor)
+            .foregroundColor(available ? .accentColor : .red)
         }
       }
       HStack(spacing: 1) {
