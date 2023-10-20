@@ -14,6 +14,10 @@ struct ContentView: View {
   
   @State var running = false
   
+  @State var amplitudes = [Float]()
+  
+  private let offSet: CGFloat = 3
+    
   // breath observer
   let observer = BreathObsever()
   
@@ -22,10 +26,13 @@ struct ContentView: View {
       HStack {
         Button {
           if running {
-            //TODO: stop process
+            // stop process
+            observer.stopAnalyzing()
             running = false
           } else {
-            // TODO: start process
+            // start process
+            try? observer.startAnalyzing()
+            amplitudes = []
             running = true
           }
         } label: {
@@ -34,6 +41,17 @@ struct ContentView: View {
             .foregroundColor(.accentColor)
         }
       }
+      HStack(spacing: 1) {
+        ForEach(amplitudes, id: \.self) { amplitude in
+          RoundedRectangle(cornerRadius: 2)
+            .frame(width: offSet, height: CGFloat(amplitude) * offSet)
+            .foregroundColor(.white)
+        }
+      }
+      .frame(height: 80 * offSet)
+    }
+    .onReceive(observer.amplitudeSubject) { value in
+      amplitudes.append(value * 1000)
     }
     .padding()
   }
