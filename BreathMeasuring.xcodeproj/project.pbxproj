@@ -16,6 +16,7 @@
 		4F862DF02ABF056F006C7984 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 4F862DEF2ABF056F006C7984 /* CombineExt */; };
 		4FDF23EE2A72AB9800F43F48 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF23ED2A72AB9800F43F48 /* LineChartView.swift */; };
 		4FE0C3772B02A4FA00C82853 /* TobiiPro.SDK.Python.OSX_1.11.0.1 in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0C3762B02A4FA00C82853 /* TobiiPro.SDK.Python.OSX_1.11.0.1 */; };
+		4FE0C3792B02A5EF00C82853 /* script.py in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0C3782B02A5EF00C82853 /* script.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		4F2CEE772A4291D900CC8614 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4FDF23ED2A72AB9800F43F48 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		4FE0C3762B02A4FA00C82853 /* TobiiPro.SDK.Python.OSX_1.11.0.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TobiiPro.SDK.Python.OSX_1.11.0.1; sourceTree = "<group>"; };
+		4FE0C3782B02A5EF00C82853 /* script.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = script.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		4FE0C3752B02A49700C82853 /* Python */ = {
 			isa = PBXGroup;
 			children = (
+				4FE0C3782B02A5EF00C82853 /* script.py */,
 				4FE0C3762B02A4FA00C82853 /* TobiiPro.SDK.Python.OSX_1.11.0.1 */,
 			);
 			path = Python;
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2CEE6A2A428C7A00CC8614 /* Preview Assets.xcassets in Resources */,
+				4FE0C3792B02A5EF00C82853 /* script.py in Resources */,
 				4FE0C3772B02A4FA00C82853 /* TobiiPro.SDK.Python.OSX_1.11.0.1 in Resources */,
 				4F2CEE662A428C7A00CC8614 /* Assets.xcassets in Resources */,
 			);
